@@ -20,10 +20,10 @@ colorButton.addEventListener('click', () => {
 function switchColor(currentColor) {
   cells = document.querySelectorAll('.grid-item')
   if(currentColor === 'black') {
-    colorButton.textContent = 'Change Color: Rainbow';
+    colorButton.textContent = 'Color: Rainbow';
     setRainbow();
   }else if(currentColor === 'rainbow') {
-    colorButton.textContent = 'Change Color: Black';
+    colorButton.textContent = 'Color: Black';
     setBlack();
   }
 }
@@ -33,6 +33,7 @@ function makeRows(rows) {
   container.style.gridTemplateColumns = `repeat(${rows}, 1fr)`;
   for (c = 0; c < (rows * rows); c++) {
     let cell = document.createElement("div");
+    cell.setAttribute('style', 'background-color: rgb(175, 175, 175');
     cell.addEventListener('mouseover', () => {
       cell.setAttribute('style', 'background-color: black');
     });
@@ -75,7 +76,7 @@ function resizeGame() {
 function clearBoard() {
   cells = document.querySelectorAll('.grid-item');
   cells.forEach((item) => {
-    item.setAttribute('style', 'background-color: white');
+    item.setAttribute('style', 'background-color: rgb(175, 175, 175)');
   });
 }
 

@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap">
+    <link rel="icon" type="image/x-icon" href="favicon.jpeg">
+    <title>Etch-A-Sketch</title>
 </head>
 <body>
-<h1>Jake Swanson's Etch-A-Sketch</h1>
+<div class="flex-container title-container"><h1>Jake Swanson's Etch-A-Sketch</h1></div>
 
-<div class="flex-container">
+<div class="flex-container grid-box">
 <div id="container" class="column"></div>
 </div>
 <div id="settings" class="flex-container">
-<button id="reset-button">Erase Grid</button>
-<button id="size-button">Change Grid Size</button>
-<button id="color-button">Change Color: Black</button>
+<button id="reset-button" class="button">Erase Grid</button>
+<button id="size-button" class="button">Change Grid Size</button>
+<button id="color-button" class="button">Color: Black</button>
 </div>
+<div class="flex-container">
+    <footer>Designed by Jake Swanson</footer>
+</div>
+<div class="flex-container"><a href="https://github.com/jacobaswanson"><img src="fa-github.png" alt=""></a></div>
 <script src="script.js"></script>
 </body>
 </html>
