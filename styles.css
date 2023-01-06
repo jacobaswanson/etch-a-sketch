@@ -2,16 +2,46 @@
     --grid-cols: 1;
     --grid-rows: 1;
   }
+
+  h1 {
+    text-align: center;
+    font-family: 'montserrat'
+  }
+
+  body {
+    background-color: #ededed;
+  }
   
   #container {
     display: grid;
     grid-gap: 0;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    width: 400px;
+    height: 400px;
+    border: solid;
+    border-width: 80px;
+    border-color: #a82626;
+    border-radius: 20px;
+    box-shadow: 0px 3px 8px;
+  }
+
+  #settings {
+    margin-top: 20px;
   }
   
   .grid-item {
-    padding: 1em;
-    border: 1px solid rgb(0, 0, 0);
-    text-align: center;
+    border: 1px;
+    border-color: black;
+    background-color: white;
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3rem; 
+  }
+
+  .column {
+    float: center;
+
   }

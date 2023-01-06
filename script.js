@@ -1,13 +1,18 @@
 const container = document.querySelector('#container')
-const button = document.querySelector('#btn')
+const sizeButton = document.querySelector('#size-button')
+const resetButton = document.querySelector('#reset-button')
 
-button.addEventListener('click', () => {
-  makeRows(resetGame())
+sizeButton.addEventListener('click', () => {
+  makeRows(resizeGame())
+});
+
+resetButton.addEventListener('click', () => {
+  clearBoard()
 });
 
 function makeRows(rows) {
-  container.style.setProperty('--grid-rows', rows);
-  container.style.setProperty('--grid-cols', rows);
+  container.style.gridTemplateRows =  `repeat(${rows}, 1fr)`;
+  container.style.gridTemplateColumns = `repeat(${rows}, 1fr)`;
   for (c = 0; c < (rows * rows); c++) {
     let cell = document.createElement("div");
     cell.addEventListener('mouseover', () => {
@@ -17,12 +22,22 @@ function makeRows(rows) {
   };
 };
 
-function resetGame() {
+function resizeGame() {
   while(container.firstChild)[
     container.removeChild(container.firstChild)
   ]
   cells = prompt('How many cells would you like per side?');
+  if(cells > 100){
+    cells = 100;
+  }
   return cells;
+}
+
+function clearBoard() {
+  cells = document.querySelectorAll('.grid-item');
+  cells.forEach((item) => {
+    item.setAttribute('style', 'background-color: white');
+  });
 }
 
 makeRows(16);
